@@ -1,11 +1,17 @@
-import React from 'react'
+import React from "react";
 
 function About() {
-  return (
-    <section id='about' className='border-b-2 border-black'>
-      about section
-    </section>
-  )
+	return (
+		<section
+			style={{
+				height: `${window.innerHeight}px`,
+			}}
+			id="about"
+			className=""
+		>
+			about section
+		</section>
+	);
 }
 
-export default About
+export default About;

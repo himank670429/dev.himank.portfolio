@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+	--height: 0;
+}
+
 .btn-primary {
 	@apply rounded-lg p-[1rem] bg-[#188168] font-bold text-xl text-white border-none outline-none;
 	transition: transform 0.3s ease-in;
@@ -10,8 +14,13 @@
 	@apply rounded-lg p-[1rem] bg-transparent font-bold text-xl text-[#188168] border-2 border-[#188168] outline-none;
 	transition: transform 0.3s ease-in;
 }
+.btn-pill-primary {
+	@apply rounded-full px-[1rem] py-[.5rem] bg-[#188168] font-bold text-xl text-white border-none outline-none;
+	transition: transform 0.3s ease-in;
+}
 .btn-primary:hover,
-.btn-secondary:hover {
+.btn-secondary:hover,
+.btn-pill-primary:hover {
 	transform: translateY(-5px);
 }
 
@@ -25,8 +34,36 @@ section {
 	background-position: right top;
 	background-size: 50%;
 }
-#root{
-	/* height: ; */
-	display: grid;
-	grid-template-rows: repeat(5, 1fr);
+#root {
+	display: flex;
+	flex-direction: column;
+}
+#root > section {
+	flex-shrink: 0;
+}
+.text-green {
+	@apply text-[#188168] dark:text-[#1C9C7D];
+}
+.border-green {
+	@apply border-[#188168] dark:border-[#1C9C7D];
+}
+.shadow-normal {
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.267);
+}
+
+.contact {
+	background-image: url("/hero.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.contact form > input,
+textarea {
+	background-color: rgba(24, 129, 104, 0.12);
+	@apply rounded-lg dark:bg-[#283145] text-green dark:text-white text-xl py-[.3rem] px-[1rem] mt-[.4rem] border-none outline-none;
+}
+.contact form > input::placeholder, textarea::placeholder{
+	@apply text-[#B1D2CA];
+}
+.contact form > label:not(:first-child){
+	@apply mt-[2rem];
 }
