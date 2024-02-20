@@ -11,7 +11,7 @@
 	transition: transform 0.3s ease-in;
 }
 .btn-secondary {
-	@apply rounded-lg p-[1rem] bg-transparent font-bold text-xl text-[#188168] border-2 border-[#188168] outline-none;
+	@apply rounded-lg p-[1rem] bg-transparent font-bold text-xl text-[#188168] border-[3px] border-[#188168] outline-none;
 	transition: transform 0.3s ease-in;
 }
 .btn-pill-primary {
@@ -24,22 +24,25 @@
 	transform: translateY(-5px);
 }
 
+.border-light {
+	@apply border-[#e6e6e6] dark:border-slate-700;
+}
+
 section {
 	@apply w-full;
 }
 
 .hero {
-	background-image: url("/hero.svg");
+	background-image: url("/icons/logo/hero.svg");
 	background-repeat: no-repeat;
-	background-position: right top;
+	background-position: right;
 	background-size: 50%;
 }
 #root {
-	display: flex;
-	flex-direction: column;
+	@apply container flex flex-col px-[3rem];
 }
 #root > section {
-	flex-shrink: 0;
+	@apply w-full flex-grow flex-shrink-0 border-light;
 }
 .text-green {
 	@apply text-[#188168] dark:text-[#1C9C7D];
@@ -47,23 +50,28 @@ section {
 .border-green {
 	@apply border-[#188168] dark:border-[#1C9C7D];
 }
+.bg-green {
+	@apply bg-[#188168] dark:bg-[#1C9C7D];
+}
 .shadow-normal {
 	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.267);
 }
 
 .contact {
-	background-image: url("/hero.svg");
+	background-image: url("/icons/logo/hero.svg");
 	background-repeat: no-repeat;
 	background-position: center;
+	background-size: 40%;
 }
 .contact form > input,
 textarea {
 	background-color: rgba(24, 129, 104, 0.12);
 	@apply rounded-lg dark:bg-[#283145] text-green dark:text-white text-xl py-[.3rem] px-[1rem] mt-[.4rem] border-none outline-none;
 }
-.contact form > input::placeholder, textarea::placeholder{
+.contact form > input::placeholder,
+textarea::placeholder {
 	@apply text-[#B1D2CA];
 }
-.contact form > label:not(:first-child){
+.contact form > label:not(:first-child) {
 	@apply mt-[2rem];
 }

@@ -2,7 +2,6 @@ import InstagramLogo from "@mui/icons-material/Instagram";
 import GithubLogo from "@mui/icons-material/GitHub";
 import LinkedInLogo from "@mui/icons-material/LinkedIn";
 import TelegramIcon from "@mui/icons-material/Telegram";
-
 import { useState } from "react";
 
 function Contact() {
@@ -15,7 +14,6 @@ function Contact() {
 	function handleSubmit(e) {
 		e.preventDefault();
 	}
-
 	return (
 		<section
 			style={{
@@ -55,7 +53,10 @@ function Contact() {
 						</a>
 					</div>
 				</div>
-				<form className="flex flex-shrink-0 mt-[2rem] dark:bg-[#1C222F] bg-white w-[50%] flex-col text-green text-3xl font-semibold shadow-normal rounded-3xl overflow-hidden p-[2rem] mb-[3rem]">
+				<form
+					onSubmit={handleSubmit}
+					className="flex flex-shrink-0 mt-[2rem] dark:bg-[#1C222F] bg-white w-[50%] flex-col text-green text-3xl font-semibold shadow-normal rounded-3xl overflow-hidden p-[2rem] mb-[3rem]"
+				>
 					<label htmlFor="name">Name</label>
 					<input
 						onChange={(e) =>
@@ -66,17 +67,20 @@ function Contact() {
 						placeholder="Your Name"
 						type="text"
 						id="name"
+						name="username"
 					/>
 					<label htmlFor="email">Email</label>
 					<input
 						onChange={(e) =>
 							setFormData((prev) => ({ ...prev, email: e.target.value }))
 						}
+						b
 						required
 						autoComplete="off"
-						placeholder="Your Email"
+						placeholder="person@gmail.com"
 						type="email"
 						id="email"
+						name="email_from"
 					/>
 					<label htmlFor="message">Message</label>
 					<textarea
@@ -89,6 +93,7 @@ function Contact() {
 						className="resize-none flex-grow mb-[1rem]"
 						type="text"
 						id="message"
+						name="message"
 					/>
 					<button
 						type="submit"
@@ -101,7 +106,7 @@ function Contact() {
 			</div>
 			<span className="flex font-bold text-green gap-2">
 				<img
-					src={import.meta.env.BASE_URL + "logo.svg"}
+					src={import.meta.env.BASE_URL + "icons/logo/logo.svg"}
 					className="w-[1.3rem] h-auto"
 				/>
 				{"© dev.Himank 2024, All Rights Reserved"}

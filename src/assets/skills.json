@@ -1,0 +1,27 @@
+{
+	"skills": [
+		"React.js",
+		"Node.js",
+		"Express.js",
+		"MongoDB",
+		"JavaScript",
+		"JSON",
+		"Rest API",
+		"User Authentication",
+		"HTML5 and CSS3",
+		"Tailwind CSS",
+		"UI/UX",
+		"Figma",
+		"Git",
+		"Github",
+		"Python",
+		"MySQL",
+		"C++"
+	],
+	"level": {
+		"Front End": 90,
+		"Back End": 80,
+		"UI/UX": 75,
+		"DSA & Competetive Programming": 20
+	}
+}

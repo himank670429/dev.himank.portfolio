@@ -9,9 +9,9 @@ function Home() {
 			className="flex flex-col px-[6.7rem] py-[5rem]"
 		>
 			<NavBar />
-			<div className="flex flex-grow flex-col hero">
+			<main className="flex flex-grow flex-col hero">
 				<div className="w-full mt-[10rem] grid grid-cols-2">
-					<div className="text-[3.4rem]  flex flex-col">
+					<div className="text-[3.2rem] 	flex flex-col">
 						<h1 className="font-semibold">Hi Mate 👋,</h1>
 						<h1 className="font-bold">
 							I am Himank Singh <br /> A Full Stack
@@ -33,7 +33,7 @@ function Home() {
 						My Skills
 					</a>
 				</div>
-			</div>
+			</main>
 		</section>
 	);
 }
