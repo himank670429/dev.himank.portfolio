@@ -6,7 +6,7 @@ function About() {
 				minHeight: `${window.innerHeight}px`,
 			}}
 			id="about"
-			className="lex flex-col px-[5rem] py-[4rem]"
+			className="flex flex-col px-[5rem] py-[4rem]"
 		>
 			<h1 className="text-[2.3rem] font-bold mb-[2rem]">My Skills 💻</h1>
 			<div className="flex flex-wrap">

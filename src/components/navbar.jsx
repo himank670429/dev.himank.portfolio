@@ -21,12 +21,12 @@ function NavBar() {
 					</a>
 				</li>
 				<li>
-					<a href="#" className="cursor-pointer hover:font-bold">
-						Services
+					<a href="#work" className="cursor-pointer hover:font-bold">
+						Experience
 					</a>
 				</li>
 				<li>
-					<a href="#" className="cursor-pointer hover:font-bold">
+					<a href="#project" className="cursor-pointer hover:font-bold">
 						Projects
 					</a>
 				</li>
