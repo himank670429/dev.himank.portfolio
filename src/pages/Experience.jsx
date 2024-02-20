@@ -15,7 +15,7 @@ function Experience() {
 		>
 			<h1 className="text-[2.3rem] font-bold mb-[2rem]">My WorkExperience</h1>
 			{/* Sanganika website DDUC */}
-			<div
+			<section
 				id="front-end-sanganika"
 				className="mb-[3rem] pb-[2rem] border-b-2 border-light"
 			>
@@ -90,10 +90,10 @@ function Experience() {
 						))}
 					</div>
 				</article>
-			</div>
+			</section>
 
 			{/* Graphics Designer */}
-			<div className="mb-[3rem] pb-[2rem] border-b-2 border-light">
+			<section className="mb-[3rem] pb-[2rem] border-b-2 border-light">
 				<div className="flex items-start px-[1rem]">
 					<div className="flex-grow border-b-2 border-light pb-[1rem]">
 						<h2 className="text-[1.5rem] font-bold mb-[.4rem] relative before:content-['2.'] before:absolute before:left-[-2rem]">
@@ -192,10 +192,10 @@ function Experience() {
 						Social Media post i have designed so far
 					</p>
 				</article>
-			</div>
+			</section>
 
 			{/* Python instership */}
-			<div>
+			<section>
 				<div className="flex items-start px-[1rem]">
 					<div className="flex-grow border-b-2 border-light pb-[1rem]">
 						<h2 className="text-[1.5rem] font-bold mb-[.4rem] relative before:content-['3.'] before:absolute before:left-[-2rem]">
@@ -223,9 +223,9 @@ function Experience() {
 						shopify store
 						<br />
 						2. Used shopify API to interact with the shopify store.
-						<br /> 
+						<br />
 						3. Used cron job to Automate report generation of product sale.
-						<br /> 
+						<br />
 					</p>
 					<h3 className="text-[1.2rem] font-bold pb-[.3rem] text-black dark:text-[#C9D1D9]">
 						skills used :-
@@ -241,7 +241,7 @@ function Experience() {
 						))}
 					</div>
 				</article>
-			</div>
+			</section>
 		</section>
 	);
 }

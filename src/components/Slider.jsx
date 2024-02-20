@@ -22,10 +22,10 @@ function Slider({ slides, size }) {
 			<div
 				style={{
 					backgroundImage: `url(${import.meta.env.BASE_URL + slides[index]})`,
-					width : size+'px',
-					height : size+'px'
+					width: size + "px",
+					height: size + "px",
 				}}
-				className="bg-contain rounded-lg"
+				className="bg-contain rounded-lg border-2 border-light"
 			/>
 			{index !== slides.length - 1 ? (
 				<ArrowCircleRightIcon
