@@ -14,11 +14,15 @@ export default function ThemeProvider({ children }) {
 		}
 	}, [theme]);
 
+	function toggleTheme(){
+		setTheme(prev => !prev)
+	}
+
 	return (
 		<ThemeContext.Provider
 			value={{
 				theme,
-				setTheme,
+				toggleTheme,
 			}}
 		>
 			{children}
@@ -27,6 +31,6 @@ export default function ThemeProvider({ children }) {
 }
 
 export function useTheme() {
-	const { theme, setTheme } = useContext(ThemeContext);
-	return { theme, setTheme };
+	const { theme, toggleTheme } = useContext(ThemeContext);
+	return [ theme, toggleTheme ];
 }

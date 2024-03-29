@@ -38,11 +38,8 @@ section {
 	background-position: right;
 	background-size: 50%;
 }
-#root {
-	@apply container flex flex-col px-[3rem];
-}
 #root > section {
-	@apply w-full flex-grow flex-shrink-0 border-light;
+	@apply w-full min-h-[760px] sm:min-h-[780px] md:min-h-[800px] lg:min-h-[840px];
 }
 .text-green {
 	@apply text-[#188168] dark:text-[#1C9C7D];
