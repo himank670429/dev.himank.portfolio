@@ -1,9 +1,9 @@
 import NavBar from "../components/navbar";
 function Home() {
 	return (
-		<section className="flex flex-col">
+		<section className="flex flex-col md:p-8 lg:p-16 border-b-2 border-darkblue-300">
 			<NavBar />
-			<main className="grow flex flex-col md:flex-row-reverse h-auto pb-4 md:pb-0 px-4">
+			<main className="grow flex flex-col md:flex-row-reverse h-auto pb-4 md:pb-0">
 				<div
 					style={{ backgroundImage: "url('icons/logo/hero.svg')" }}
 					className="bg-contain bg-center bg-no-repeat flex py-[100px] sm:[120px] md:py-[140px] justify-center grow items-center"
@@ -13,7 +13,7 @@ function Home() {
 						src="myphoto.jpg"
 					/>
 				</div>
-				<div className="relative flex-col flex grow md:justify-center md:grow-0 lg:grow">
+				<div className="relative flex-col flex grow md:justify-center md:grow-0 xl:grow">
 					<div className="text-center md:text-left text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-10 ">
 						<p>
 							Hi there 👋, <br />I am <b>Himank Singh</b>, <br />A <b>Full Stack</b>
@@ -22,7 +22,7 @@ function Home() {
 							Web Developer
 						</b>
 					</div>
-					<div className="flex gap-2 justify-center md:justify-start mt-6 md:mt-12 font-bold md:gap-4 text-lg sm:text-xl md:text-2xl md:ml-16">
+					<div className="flex gap-2 justify-center md:justify-start mt-6 md:mt-12 font-bold md:gap-4 text-lg sm:text-xl md:text-2xl">
 						<a
 							href={import.meta.env.BASE_URL + "resume.pdf"}
 							className="bg-basegreen-300 dark:bg-darkbasegreen-300 p-2 text-white rounded-md "
