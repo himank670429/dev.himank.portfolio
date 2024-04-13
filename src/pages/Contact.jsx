@@ -16,9 +16,6 @@ function Contact() {
 	}
 	return (
 		<section
-			style={{
-				height: `${window.innerHeight}px`,
-			}}
 			id="contact"
 			className="flex flex-col px-[3.5rem] py-[3.3rem] contact"
 		>

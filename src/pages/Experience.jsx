@@ -7,9 +7,7 @@ function Experience() {
 	const { theme } = useTheme();
 	return (
 		<section
-			style={{
-				minHeight: `${window.innerHeight}px`,
-			}}
+			
 			className="flex flex-col px-[5rem] py-[4rem]"
 			id="work"
 		>

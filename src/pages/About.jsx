@@ -2,9 +2,6 @@ import skillData from "../assets/skills";
 function About() {
 	return (
 		<section
-			style={{
-				minHeight: `${window.innerHeight}px`,
-			}}
 			id="about"
 			className="flex flex-col px-[5rem] py-[4rem]"
 		>

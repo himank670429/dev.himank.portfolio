@@ -3,9 +3,6 @@ import React from "react";
 function Projects() {
 	return (
 		<section
-			style={{
-				minHeight: `${window.innerHeight}px`,
-			}}
 			id="project"
 			className="flex flex-col px-[5rem] py-[4rem]"
 		>
