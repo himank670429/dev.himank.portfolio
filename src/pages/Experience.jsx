@@ -7,7 +7,6 @@ function Experience() {
 	const { theme } = useTheme();
 	return (
 		<section
-			
 			className="flex flex-col px-[5rem] py-[4rem]"
 			id="work"
 		>
