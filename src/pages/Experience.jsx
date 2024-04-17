@@ -1,7 +1,7 @@
 import React from "react";
 import { useTheme } from "../context/ThemeContext";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
-import Slider from "../components/slider";
+import Slider from "../components/Slider";
 import HourglassEmptyIcon from "@mui/icons-material/HourglassEmpty";
 function Experience() {
 	const { theme } = useTheme();
