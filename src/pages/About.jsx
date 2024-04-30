@@ -1,54 +1,69 @@
 import skillData from "../assets/skills";
+
+import { useTheme } from "../context/ThemeContext";
 function About() {
+	const [theme, _] = useTheme();
 	return (
 		<section
 			id="about"
-			className="flex flex-col px-[5rem] py-[4rem]"
+			className="flex flex-col p-4 md:p-8 lg:p-16 border-b-2 border-darkblue-300 gap-6"
 		>
-			<h1 className="text-[2.3rem] font-bold mb-[2rem]">My Skills 💻</h1>
-			<div className="flex flex-wrap">
-				{skillData.skills.map((item, index) => (
-					<span
-						key={index}
-						className="text-white bg-[#70B1A1] dark:bg-[#0F5348] px-[1rem] py-[.5rem] font-semibold text-lg m-[.8rem] rounded-lg"
-					>
-						{item}
-					</span>
-				))}
+			<h1 className="text-[2.3rem] font-bold mb-4">About me</h1>
+			{/* my self */}
+			<div className="flex flex-col gap-4 lg:flex-row">
+				<img
+					src="/myphoto_2.jpg"
+					className="rounded-xl max-h-[300px] self-center"
+				/>
+				<p className="text-base sm:text-lg lg:text-xl">
+					My self Himank Singh, and i am a <strong>full stack web developer.</strong>{" "}
+					<br />
+					<br />I enjoy working in this domain to serve people their needs by making
+					various <strong>cross platform web based tools.</strong> I have a strong
+					web development skills. I am passionate
+					<br />
+					<br />
+					towards learning new skills and gain more knowledge about the things I
+					don't know.
+					<br />
+					<br />I am currently pursuing{" "}
+					<strong>Bachelors in Computer Science</strong>
+				</p>
 			</div>
-			<div className="grid grid-cols-2 gap-[2rem]">
-				<div className="flex flex-col mr-3 pb-[1rem]">
-					<h1 className="text-[2.3rem] font-bold my-[2rem]">Overview</h1>
-					{Object.keys(skillData.level).map((item, index) => (
-						<div className="font-bold text-lg" key={index}>
-							{item}
-							<div className="w-full h-[.7rem] bg-[#AFD3CA] dark:bg-[#223C3D] rounded-full mb-[1.2rem]">
-								<div
-									style={{ width: skillData.level[item] + "%" }}
-									className="bg-green rounded-full h-full"
-								/>
+
+			{/* skills */}
+			<ul className="flex flex-col mt-8 gap-8">
+				<h1 className="text-[2rem] font-bold">My Skills</h1>
+				{skillData.map((item, index) => {
+					return (
+						<li className="flex flex-col gap-4" key={index}>
+							<span className="text-xl font-bold flex items-center gap-2">
+								{item.icon} {item.name}
+							</span>
+							<div className="flex flex-wrap gap-2 items-end">
+								{item.skills.map((skill, s_index) => {
+									const last_index = item.skills.length - 1
+									return (
+										<>
+											<span
+												key={s_index}
+												className="flex items-center flex-col bg-basegreen-50 dark:bg-darkbasegreen-100 box-border p-3 rounded-lg"
+											>
+												<img
+													src={theme ? skill["dark-icon"] || skill.icon : skill.icon}
+													className="size-[30px] object-contain"
+												/>
+												<span>{skill.name}</span>
+											</span>
+											{s_index !== last_index ? <b className="mb-2">.</b> : null}
+										</>
+									);
+								})}
 							</div>
-						</div>
-					))}
-				</div>
-				<ul className="flex flex-col border-light pl-3 pb-[1rem] font-semibold list-disc">
-					<h1 className="text-[2.3rem] font-bold my-[2rem]">Core Values</h1>
-					<li className="ml-[2rem]">
-						As a <b>quick learner</b>, I adeptly adapt, utilizing fundamentals for
-						effective problem-solving in any environment.
-					</li>
-					<li className="ml-[2rem]">
-						Dedicated to delivering <b>high-quality work</b>, I go the extra mile for
-						clean, readable, well-documented, and well-tested code.
-					</li>
-					<a
-						href="#work"
-						className="self-center bg-green text-white mt-auto w-fit py-[.4rem] px-[1rem] rounded-md shadow hover:translate-y-[-.2rem] transition-transform text-xl"
-					>
-						My work Experience
-					</a>
-				</ul>
-			</div>
+						</li>
+					);
+				})}
+			</ul>
 		</section>
 	);
 }
