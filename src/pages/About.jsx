@@ -1,5 +1,5 @@
 import skillData from "../assets/skills";
-
+import React from "react";
 import { useTheme } from "../context/ThemeContext";
 function About() {
 	const [theme, _] = useTheme();
@@ -42,11 +42,10 @@ function About() {
 							</span>
 							<div className="flex flex-wrap gap-2 items-end">
 								{item.skills.map((skill, s_index) => {
-									const last_index = item.skills.length - 1
+									const last_index = item.skills.length - 1;
 									return (
-										<>
+										<React.Fragment key={s_index}>
 											<span
-												key={s_index}
 												className="flex items-center flex-col bg-basegreen-50 dark:bg-darkbasegreen-100 box-border p-3 rounded-lg"
 											>
 												<img
@@ -56,7 +55,7 @@ function About() {
 												<span>{skill.name}</span>
 											</span>
 											{s_index !== last_index ? <b className="mb-2">.</b> : null}
-										</>
+										</React.Fragment>
 									);
 								})}
 							</div>

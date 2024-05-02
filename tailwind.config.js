@@ -22,10 +22,11 @@ export default {
 					300: "#283145",
 				},
 				light: "#C9D1D9",
+				skyblue : "#8899AA",
 				gray: {
 					light: "#F4F4F4",
 					extralight: "#E7E7E7",
-					dakr: "#6D6D6D",
+					dark: "#6D6D6D",
 				},
 			},
 		},
