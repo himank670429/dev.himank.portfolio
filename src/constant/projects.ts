@@ -33,4 +33,15 @@ export const PROJECTS : ProjectType[] = [
     demoLink: "https://sem-6.onrender.com",
     githubLink: "https://github.com/himank670429/sem-6",
   },
+  {
+    id: 3,
+    title: "Tetris",
+    description:
+      "Enjoy a faithful remake of the iconic 1980s arcade puzzle game. Rotate, slide, and drop classic tetrominoes with smooth controls and retro visuals. Built with Python and Pygame for a nostalgic but modern experience.",
+    image:
+      require("@/assets/images/projects/tetris.png"),
+    tags: ["python", "pygame"],
+    demoLink: "https://himank670429.itch.io/tetris",
+    githubLink: "https://github.com/himank670429/tetris",
+  },
 ];
